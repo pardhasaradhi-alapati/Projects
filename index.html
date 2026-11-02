@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="brand-wrap">
+            <span class="brand-icon">QR</span>
+            <div>
+                <h1>QR Code Generator</h1>
+                <p>Generate QR codes for any text or URL</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="app-shell">
+
+        <section class="generator-card">
+
+            <form id="qrForm">
+
+                <label for="textInput">Enter text or URL</label>
+
+                <input
+                    type="text"
+                    id="textInput"
+                    placeholder="https://example.com"
+                    required
+                >
+
+                <div class="customization">
+
+                    <div class="option">
+                        <label for="qrSize">QR Code Size</label>
+                        <select id="qrSize">
+                            <option value="200">200 × 200</option>
+                            <option value="250" selected>250 × 250</option>
+                            <option value="300">300 × 300</option>
+                            <option value="400">400 × 400</option>
+                        </select>
+                    </div>
+
+                    <div class="option">
+                        <label for="qrColor">QR Color</label>
+                        <input type="color" id="qrColor" value="#000000">
+                    </div>
+
+                    <div class="option">
+                        <label for="bgColor">Background Color</label>
+                        <input type="color" id="bgColor" value="#ffffff">
+                    </div>
+
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="generate-btn">
+                        Generate QR
+                    </button>
+
+                    <button type="button" id="clearBtn" class="clear-btn">
+                        Clear
+                    </button>
+                </div>
+
+            </form>
+
+            <div id="qrCodeContainer" class="qr-code-container">
+                <p>Your QR code will appear here.</p>
+            </div>
+
+            <button id="downloadBtn" class="download-btn" disabled>
+                Download QR Code
+            </button>
+
+            <p id="message" class="message" aria-live="polite"></p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 QR Code Generator. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+</html>
