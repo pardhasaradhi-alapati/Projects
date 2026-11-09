@@ -84,4 +84,7 @@ def generate_qr():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True,port=5001)
+@app.route("/qr-check")
+def qr_check():
+    return "QR CODE GENERATOR IS WORKING - Flask is working fine!"
